@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sufyan Private Gallery</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#111;
+    color:white;
+    text-align:center;
+}
+
+#login{
+    margin-top:120px;
+}
+
+input{
+    padding:10px;
+    width:220px;
+    border-radius:8px;
+    border:none;
+    font-size:18px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    background:#00b894;
+    color:white;
+    cursor:pointer;
+}
+
+#gallery{
+    display:none;
+    padding:20px;
+}
+
+img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    margin:10px;
+    border-radius:15px;
+    border:3px solid white;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="login">
+<h1>🔒 Private Gallery</h1>
+
+<input type="password" id="pass" placeholder="Enter Password">
+
+<br><br>
+
+<button onclick="check()">Login</button>
+
+<p id="msg"></p>
+</div>
+
+<div id="gallery">
+
+<h1>Welcome Sufyan ❤️</h1>
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+
+</div>
+
+<script>
+
+function check(){
+
+let p=document.getElementById("pass").value;
+
+if(p=="1234"){
+document.getElementById("login").style.display="none";
+document.getElementById("gallery").style.display="block";
+}else{
+document.getElementById("msg").innerHTML="Wrong Password!";
+}
+
+}
+
+</script>
+
+</body>
+</html>
